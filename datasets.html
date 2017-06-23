@@ -1,0 +1,32 @@
+---
+layout: page
+title: Datasets
+---
+
+<div class="home">
+
+  <!-- <h1 class="page-heading">Reports</h1> -->
+  
+  <!-- {{ content }} -->
+
+  <ul class="post-list">
+  {% for dataset in site.datasets %}
+    <li>        
+
+    {% if dataset.date %}
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ dataset.date | date: date_format }}</span>
+    {% endif %}
+
+      <h2>
+        <a class="post-link" href={{dataset.url | relative_url }}>{{ dataset.title }}</a>
+      </h2>
+
+      <b>{{ dataset.file }}: </b> {{ dataset.description }}
+      </li>
+  {% endfor %}
+  </ul>
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+
+</div>

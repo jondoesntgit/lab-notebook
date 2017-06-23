@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+      <h1 class="post-title">{{ page.file | escape }}</h1>
+    <h2>{{ page.description | escape }}</h2>
+  </header>
+
+  <div class="post-content">
+  <p>Download <a href="{{page.file}}">{{page.file}}</a></p>
+    {{ content }}
+  </div>
+
+</article>
