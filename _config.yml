@@ -37,3 +37,6 @@ collections:
   datasets:
     output: true
     permalink: /datasets/:path/
+
+# Plugins
+plugins_dir: _plugins
